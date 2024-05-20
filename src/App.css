@@ -1,38 +1,498 @@
+.container{
+  width: 100%;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-bottom: 5rem;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  /* margin-bottom: 10px; */
+}
+
+.App-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #3B3B3E;
+  
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #FFA50B;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.auth-buttons {
+  display: flex;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-buttons .login {
+  background-color: transparent;
+  color: #333;
+}
+
+.auth-buttons .signup {
+  background-color: #ff00ff;
+  color: #fff;
+}
+
+.initiative {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #ff9900;
+}
+
+.main-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.main-content .highlight {
+  color: #ff00ff;
+}
+
+.main-content p {
+  font-size: 18px;
+  color: #666;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.badges .badge {
+  background-color: #FFF4C5;
+  color: #BB5302;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.buttons .enroll{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.buttons .enroll {
+  background-color: #992E9D;
+  color: #fff;
+}
+
+.buttons .know-more {
+  background-color: transparent;
+  font-weight: 600;
+  color: #992E9D;
+  border: none;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #F9EBFC;
+}
+
+.stats .stat {
+  text-align: center;
+}
+
+/* .stat-r{
+  display: flex;
+  justify-content: space-around;
+  border-right: 2px dotted #F4D6F8;
+} */
+
+.stats .stat p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: #666;
+}
+
+
+
+
+/********************* Course Page **************/
+
+/* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+} */
+
+.course {
+  text-align: center;
+  background-color: #FCF5FE;
+  padding: 3rem 0 3rem;
+  /* padding: 20px; */
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.learning-path {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f3e8ff;
+  
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+}
+
+.course-highlight {
+  background: linear-gradient(to right,#B73BBE,#EBCB2E);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.course-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 2px solid #E5E5E8;
+  padding: 20px;
+  width: 100%;
+  max-width: 80vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.course-info {
+  text-align: left;
+}
+
+.course-info h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.course-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.view-curriculum {
+  background-color: #f3e8ff;
+  color: #a64ac9;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view-curriculum:hover {
+  background-color: #e0d4ff;
+}
+
+@media (max-width: 600px) {
+  .course-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .view-curriculum {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/********************Offer Page*******************/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+header .highlight {
+  color: #a34bb8;
+}
+
+.offer {
+  background-color: #a34bb8;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.offer-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.offer-details p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+main h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.step {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+  
+  .offer-details h2 {
+    font-size: 2em;
+  }
+
+  main h2 {
+    font-size: 2em;
+  }
+
+  .step h3 {
+    font-size: 1.5em;
+  }
+}
+
+
+
+/****************************** Certificate ******************************/
+
+
+.certificates-container {
+  text-align: center;
+  /* padding: 20px; */
+  /* height: 100vh; */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* h1 .highlight {
+  color: #a34bb8;
+} */
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.certificate-section, .internship-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-section h2, .internship-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.certificate-card {
+  text-align: left;
+}
+
+.certificate-card img, .internship-section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .certificate-section, .internship-section {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .certificate-section h2, .internship-section h2 {
+    font-size: 1.2em;
+  }
+}
+
+
+
+/****************************Internship**********************************/
+
+
+.internship-container {
+  text-align: center;
+  /* padding: 20px; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.step {
+  background-color: #f3e5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #6a1b9a;
+}
+
+.step p {
+  font-size: 1em;
+  color: #333;
+}
+
+.apply-button {
+  background-color: #8e24aa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #6a1b9a;
+}
+
+@media (max-width: 768px) {
+  .step {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .step p {
+    font-size: 0.9em;
+  }
+
+  .icon {
+    font-size: 1.5em;
   }
 }
